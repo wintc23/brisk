@@ -1,11 +1,17 @@
 {
   "name": "BriskPage",
-  "version": "0.0.2",
+  "version": "0.0.8",
   "manifest_version": 2,
   "description": "control the web page with CSS",
   "browser_action": {
     "default_icon": "favicon.jpeg",
     "default_title": "清新网页",
     "default_popup": "popup.html"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.baidu.com/*"],
+      "js": ["brisk.js"]
+    }
+  ]
 }
